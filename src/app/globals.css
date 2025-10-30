@@ -2,25 +2,107 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f2a3d;
+  --brand-primary: #1a6e46;
+  --brand-primary-dark: #0f2a3d;
+  --brand-accent: #f1f7f2;
+  --brand-accent-dark: #dcebe3;
+  --neutral-600: #475467;
+  --neutral-400: #6b7a89;
+  --shadow-soft-brand: 0 28px 60px -28px rgba(26, 110, 70, 0.45);
+  --border-soft: #e0f0e7;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-dark: var(--brand-primary-dark);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-dark: var(--brand-accent-dark);
+  --color-border-soft: var(--border-soft);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-400: var(--neutral-400);
+  --font-sans: var(--font-poppins);
   --font-mono: var(--font-geist-mono);
 }
 
+/* Disable dark mode - force light mode untuk semua device */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #0f2a3d;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  /* Standard section padding - dipakai untuk semua section */
+  .section-padding-x {
+    padding-left: 1rem; /* 16px */
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-padding-x {
+      padding-left: 1.5rem; /* 24px */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .section-padding-x {
+      padding-left: 2rem; /* 32px */
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .section-padding-x {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .section-padding-y {
+    padding-top: 1.5rem; /* 48px */
+    padding-bottom: 1.5rem;
+  }
+
+  /* Container width standard untuk semua section */
+  .section-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 80rem; /* 1280px = max-w-7xl */
+  }
+
+  .bg-hero-gradient {
+    background-image: linear-gradient(
+      180deg,
+      var(--brand-accent) 0%,
+      #ffffff 100%
+    );
+  }
+
+  .text-brand-primary {
+    color: var(--brand-primary);
+  }
+
+  .text-brand-secondary {
+    color: var(--brand-primary-dark);
+  }
+
+  .text-neutral-600 {
+    color: var(--neutral-600);
+  }
+
+  .shadow-brand-soft {
+    box-shadow: var(--shadow-soft-brand);
+  }
 }
