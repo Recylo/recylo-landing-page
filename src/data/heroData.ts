@@ -6,32 +6,32 @@
 
 /**
  * HERO_HIGHLIGHTS
- * Data 3 langkah utama menggunakan Recylo
+ * 3 Fitur utama Recylo
  *
  * Digunakan di: HeroCopy component (section Highlights)
  * Format: id, icon, title, description
  */
 export const HERO_HIGHLIGHTS = [
   {
-    id: "schedule",
-    icon: "recycle",
-    title: "Kumpulkan sampahmu",
-    description:
-      "Pisahkan kardus, kertas, atau botol di rumah. Nggak perlu ribet!",
-  },
-  {
-    id: "secure",
-    icon: "truck",
-    title: "Kami jemput gratis",
-    description:
-      "Pilih jadwal yang cocok, kurir kami datang langsung ke rumahmu.",
-  },
-  {
-    id: "wallet",
+    id: "points",
     icon: "coins",
-    title: "Langsung dapat poin",
+    title: "Tukar Sampah Jadi Poin",
     description:
-      "Sampahmu ditimbang, kamu dapat poin yang bisa ditukar jadi uang!",
+      "Sampahmu bernilai! Dapatkan poin setiap kali tukar sampah, lalu cairkan jadi uang.",
+  },
+  {
+    id: "ai",
+    icon: "scan",
+    title: "Recylo AI Scanner",
+    description:
+      "Scan sampahmu dengan AI, langsung tau jenis dan nilainya. Canggih & akurat!",
+  },
+  {
+    id: "marketplace",
+    icon: "shopping-bag",
+    title: "Marketplace Kerajinan",
+    description:
+      "Belanja produk unik dari sampah daur ulang. Stylish, ramah lingkungan, dan bermakna!",
   },
 ] as const;
 
@@ -84,11 +84,22 @@ export const HERO_MATERIALS = [
  * Format: label, metric, detail, stats[]
  */
 export const HERO_IMPACT = {
-  label: "Pencapaian Komunitas",
-  metric: "50.000+ kg",
-  detail: "Sampah berhasil didaur ulang bersama",
+  label: "Target Kami",
+  metric: "1.000+ kg",
+  detail: "Target sampah daur ulang di tahun pertama",
   stats: [
-    { value: "10.000+", label: "Pengguna Aktif" },
-    { value: "250.000+", label: "Botol Diselamatkan" },
+    { value: "1000+", label: "Early Adopters" },
+    { value: "50+", label: "Mitra Komunitas" },
   ],
 } as const;
+
+// Versi sebelumnya (untuk production/setelah launch):
+// export const HERO_IMPACT = {
+//   label: "Pencapaian Komunitas",
+//   metric: "50.000+ kg",
+//   detail: "Sampah berhasil didaur ulang bersama",
+//   stats: [
+//     { value: "10.000+", label: "Pengguna Aktif" },
+//     { value: "5.000+", label: "Transaksi Berhasil" },
+//   ],
+// } as const;

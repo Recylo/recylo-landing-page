@@ -1,4 +1,4 @@
-import { Coins, Recycle, Truck, type IconNode } from "lucide";
+import { Coins, ScanLine, ShoppingBag, type IconNode } from "lucide";
 
 import type { HeroHighlight } from "../../data/heroData";
 import { LucideIcon } from "./LucideIcon";
@@ -10,9 +10,9 @@ type HighlightIconName = HeroHighlight["icon"];
  * Menghubungkan nama icon dengan komponen Lucide
  */
 const HIGHLIGHT_ICON_MAP: Record<HighlightIconName, IconNode> = {
-  recycle: Recycle,
-  truck: Truck,
   coins: Coins,
+  scan: ScanLine,
+  "shopping-bag": ShoppingBag,
 };
 
 type HighlightIconProps = {

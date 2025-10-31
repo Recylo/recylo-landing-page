@@ -139,7 +139,7 @@ export const HeroIllustration = () => {
         <div className="absolute left-0 hidden w-64 rounded-[20px] bg-brand-primary px-4 py-3 text-brand-accent shadow-xl sm:flex sm:w-72 sm:flex-col sm:gap-2 sm:px-5 sm:py-4 md:-bottom-32 lg:-bottom-32">
           <div className="flex items-center gap-2">
             <LucideIcon icon={Sparkles} size={14} className="sm:size-4" />
-            <p className="text-[10px] uppercase tracking-[0.16em] text-brand-accent/80 sm:text-xs">
+            <p className="text-[10px] uppercase tracking-[0.16em] text-brand-accent/80 sm:text-base">
               {HERO_IMPACT.label}
             </p>
           </div>

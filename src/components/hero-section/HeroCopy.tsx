@@ -30,7 +30,9 @@ export const HeroCopy = () => {
           id="hero-heading"
           className="text-4xl font-extrabold leading-tight text-brand-secondary md:text-5xl lg:text-6xl"
         >
-          Tukar Sampah Jadi Uang. Gampang Banget!
+          Sampahmu Bernilai.
+          <br />
+          Tukar, Scan, Belanja!
         </h1>
         {/* alternatif:
         1. Tukar Sampah Jadi Uang. Gampang Banget!
@@ -40,18 +42,18 @@ export const HeroCopy = () => {
         5. Peduli Lingkungan, Dapet Passive Income. Double Win!
         */}
         <p className="text-base leading-relaxed text-neutral-600 sm:text-lg">
-          Punya kardus bekas, kertas, atau botol menumpuk? Jangan dibuang!
-          Dengan <strong>Recylo</strong>, kamu bisa tukar sampah-sampah itu jadi
-          poin, terus tukar lagi jadi uang. Caranya mudah: kumpulkan, kami
-          jemput gratis, dan kamu langsung dapat poin.
+          <strong>Recylo</strong> bukan cuma platform tukar sampah biasa. Dengan{" "}
+          <strong>AI Scanner</strong>, kamu bisa kenali jenis sampahmu langsung
+          dari kamera. Tukar jadi poin, belanja kerajinan unik di{" "}
+          <strong>Marketplace</strong>, dan bantu lingkungan sambil dapat cuan!
           <span className="font-semibold text-brand-primary">
             {" "}
-            Nggak pakai ribet!
+            Teknologi hijau yang menguntungkan.
           </span>
         </p>
       </div>
 
-      {/* 3 Langkah Highlights */}
+      {/* 3 Fitur Utama */}
       <Highlights highlights={HERO_HIGHLIGHTS} />
 
       {/* Tombol Call-to-Action */}
