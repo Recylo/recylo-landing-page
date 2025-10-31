@@ -1,4 +1,5 @@
 import { CaraKerjaSection } from "./CaraKerjaSection";
+import { FAQSection } from "./FAQSection";
 import { HeroSection } from "./HeroSection";
 import { TentangKamiSection } from "./TentangKamiSection";
 
@@ -8,6 +9,7 @@ export const LandingPageSection = () => {
       <HeroSection />
       <CaraKerjaSection />
       <TentangKamiSection />
+      <FAQSection />
     </main>
   );
 };
