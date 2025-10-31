@@ -17,7 +17,7 @@ const BUTTON_BASE_CLASSES =
  */
 export const HeroCopy = () => {
   return (
-    <div className="flex w-full max-w-2xl flex-col gap-8 lg:gap-2">
+    <div className="flex w-full max-w-2xl flex-col gap-8 lg:gap-4">
       {/* Badge Brand */}
       <span className="inline-flex w-fit items-center gap-2 rounded-full bg-linear-to-r from-brand-primary to-emerald-600 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-brand-primary/30">
         <span className="flex h-2 w-2 rounded-full bg-white" />

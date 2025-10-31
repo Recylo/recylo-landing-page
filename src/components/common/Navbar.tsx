@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 
 const NAV_LINKS = [
   { label: "Beranda", href: "/" },
@@ -21,6 +21,27 @@ export const Navbar = () => {
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
+  const handleNavLinkClick =
+    (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+      closeMenu();
+
+      const { pathname, search } = window.location;
+      const basePath = `${pathname}${search}`;
+
+      if (href === "/") {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.history.replaceState(null, "", basePath);
+        return;
+      }
+
+      if (href.startsWith("#")) {
+        event.preventDefault();
+        const section = document.querySelector(href);
+        section?.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.history.replaceState(null, "", `${basePath}${href}`);
+      }
+    };
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
@@ -39,9 +60,10 @@ export const Navbar = () => {
           <div className="hidden items-center gap-8 lg:flex">
             <ul className="flex items-center gap-6">
               {NAV_LINKS.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
+                    onClick={handleNavLinkClick(link.href)}
                     className="text-sm font-medium text-neutral-600 transition hover:text-brand-primary"
                   >
                     {link.label}
@@ -99,10 +121,10 @@ export const Navbar = () => {
           <div className="border-t border-border-soft pb-4 pt-4">
             <ul className="flex flex-col gap-4">
               {NAV_LINKS.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
-                    onClick={closeMenu}
+                    onClick={handleNavLinkClick(link.href)}
                     className="block text-base font-medium text-neutral-600 transition hover:text-brand-primary"
                   >
                     {link.label}
