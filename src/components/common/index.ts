@@ -3,3 +3,4 @@
  * Export komponen umum yang dipakai di berbagai section
  */
 export { Navbar } from "./Navbar";
+export { LucideIcon } from "./LucideIcon";

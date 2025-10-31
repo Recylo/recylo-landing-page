@@ -5,7 +5,7 @@ import {
   HERO_MATERIALS,
   HERO_TIMELINE,
 } from "../../data/heroData";
-import { LucideIcon } from "./LucideIcon";
+import { LucideIcon } from "../common/LucideIcon";
 
 const MATERIAL_ICONS = {
   package: Package,
@@ -17,7 +17,7 @@ const MATERIAL_ICONS = {
 export const HeroIllustration = () => {
   return (
     <div
-      className="relative flex w-full flex-col gap-4 md:gap-6 motion-safe:animate-fade-slide-up sm:max-w-lg lg:max-w-xl"
+      className="relative flex w-full flex-col gap-4 md:gap-6 max-w-2xl"
       aria-hidden
     >
       {/* Material Diterima - Mobile Version */}

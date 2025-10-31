@@ -1,7 +1,7 @@
 import { Coins, ScanLine, ShoppingBag, type IconNode } from "lucide";
 
 import type { HeroHighlight } from "../../data/heroData";
-import { LucideIcon } from "./LucideIcon";
+import { LucideIcon } from "../common/LucideIcon";
 
 type HighlightIconName = HeroHighlight["icon"];
 
