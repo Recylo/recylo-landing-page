@@ -72,7 +72,7 @@ export const HERO_TIMELINE = [
 export const HERO_MATERIALS = [
   { name: "Kardus", icon: "package" },
   { name: "Kertas", icon: "file-text" },
-  { name: "Kaleng Sprite", icon: "can" },
+  { name: "Kaleng Aluminium", icon: "can" },
   { name: "Kaleng Susu", icon: "milk" },
 ] as const;
 
@@ -88,8 +88,8 @@ export const HERO_IMPACT = {
   metric: "1.000+ kg",
   detail: "Target sampah daur ulang di tahun pertama",
   stats: [
-    { value: "1000+", label: "Early Adopters" },
-    { value: "50+", label: "Mitra Komunitas" },
+    { value: "500+", label: "Early Adopters" },
+    { value: "10+", label: "Mitra Komunitas" },
   ],
 } as const;
 

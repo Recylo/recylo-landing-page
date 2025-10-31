@@ -106,7 +106,7 @@ export const HeroIllustration = () => {
         </div>
 
         {/* Material Diterima - Desktop Version (Floating) */}
-        <div className="absolute -top-20 right-0 hidden w-48 rounded-3xl bg-white/85 p-4 shadow-brand-soft backdrop-blur sm:block sm:-top-24 sm:w-56 lg:w-72 lg:p-5">
+        <div className="absolute -top-20 right-0 hidden w-48 rounded-3xl bg-white/85 p-4 shadow-brand-soft backdrop-blur sm:block sm:-top-28 sm:w-56 lg:w-72 lg:p-5">
           <div className="mb-2.5 flex items-center gap-2 sm:mb-3">
             <p className="text-[10px] font-semibold text-brand-secondary sm:text-xs">
               Material Diterima
