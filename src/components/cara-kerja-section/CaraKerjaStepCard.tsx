@@ -1,5 +1,5 @@
-import type { CaraKerjaStep } from "../../data/caraKerjaData";
 import { LucideIcon } from "../common/LucideIcon";
+import type { CaraKerjaStep } from "./caraKerjaData";
 
 type CaraKerjaStepCardProps = {
   step: CaraKerjaStep;
@@ -7,7 +7,7 @@ type CaraKerjaStepCardProps = {
 
 export const CaraKerjaStepCard = ({ step }: CaraKerjaStepCardProps) => {
   return (
-    <li className="flex h-full flex-col gap-5 rounded-3xl border border-brand-accent-dark/60 bg-white p-6 text-left shadow-brand-soft md:p-7">
+    <li className="flex h-full flex-col gap-3 rounded-3xl border border-brand-accent-dark bg-white p-6 text-left shadow-brand-soft md:p-7">
       <div className="flex items-center justify-between">
         <span className="inline-flex items-center justify-center rounded-full bg-brand-accent px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-primary">
           Langkah {step.id}

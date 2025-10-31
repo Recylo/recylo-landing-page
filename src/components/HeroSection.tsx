@@ -9,7 +9,7 @@ import { HeroIllustration } from "./hero-section/HeroIllustration";
 export const HeroSection = () => {
   return (
     <section aria-labelledby="hero-heading">
-      <div className="flex min-h-screen flex-col items-center gap-12 sm:gap-32 lg:flex-row lg:items-center lg:justify-between lg:gap-20">
+      <div className="section-container flex flex-col items-center gap-12 sm:gap-32 lg:flex-row lg:items-center lg:justify-between lg:gap-20 py-4 lg:py-0">
         <HeroCopy />
         <HeroIllustration />
       </div>
