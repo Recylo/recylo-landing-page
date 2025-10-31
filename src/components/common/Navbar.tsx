@@ -1,0 +1,128 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+
+const NAV_LINKS = [
+  { label: "Beranda", href: "/" },
+  { label: "Cara Kerja", href: "#cara-kerja" },
+  { label: "Tentang", href: "#tentang" },
+  { label: "Kontak", href: "#kontak" },
+] as const;
+
+/**
+ * Navbar Component
+ * Responsive navigation dengan hamburger menu
+ * Mobile: Hamburger menu dengan animasi X
+ * Desktop: Horizontal navigation
+ */
+export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const closeMenu = () => setIsMenuOpen(false);
+
+  return (
+    <nav className="fixed left-0 right-0 top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+      <div className="section-container section-padding-x">
+        <div className="flex items-center justify-between py-4">
+          {/* Logo/Brand */}
+          <Link
+            href="/"
+            className="text-xl font-bold text-brand-primary sm:text-2xl"
+            onClick={closeMenu}
+          >
+            Recylo
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden items-center gap-8 lg:flex">
+            <ul className="flex items-center gap-6">
+              {NAV_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm font-medium text-neutral-600 transition hover:text-brand-primary"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              href="https://app.recylo.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-2xl bg-brand-primary px-6 py-2.5 text-sm font-semibold text-brand-accent transition hover:bg-brand-primary/90"
+            >
+              Mulai Sekarang
+            </Link>
+          </div>
+
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={toggleMenu}
+            className="relative z-50 flex h-10 w-10 flex-col items-center justify-center lg:hidden"
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+          >
+            <span className="sr-only">
+              {isMenuOpen ? "Tutup menu" : "Buka menu"}
+            </span>
+
+            {/* Hamburger Lines dengan animasi jadi X */}
+            <span
+              className={`absolute h-0.5 w-6 bg-brand-primary transition-all duration-300 ${
+                isMenuOpen ? "rotate-45 transform" : "-translate-y-2 transform"
+              }`}
+            />
+            <span
+              className={`absolute h-0.5 w-6 bg-brand-primary transition-all duration-300 ${
+                isMenuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute h-0.5 w-6 bg-brand-primary transition-all duration-300 ${
+                isMenuOpen ? "-rotate-45 transform" : "translate-y-2 transform"
+              }`}
+            />
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden ${
+            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="border-t border-border-soft pb-4 pt-4">
+            <ul className="flex flex-col gap-4">
+              {NAV_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    onClick={closeMenu}
+                    className="block text-base font-medium text-neutral-600 transition hover:text-brand-primary"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              href="https://app.recylo.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+              className="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-brand-primary px-6 py-3 text-base font-semibold text-brand-accent transition hover:bg-brand-primary/90"
+            >
+              Mulai Sekarang
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};

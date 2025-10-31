@@ -17,7 +17,7 @@ const MATERIAL_ICONS = {
 export const HeroIllustration = () => {
   return (
     <div
-      className="relative flex w-full max-w-md flex-col gap-4 md:gap-6 motion-safe:animate-fade-slide-up sm:max-w-lg lg:max-w-xl"
+      className="relative flex w-full flex-col gap-4 md:gap-6 motion-safe:animate-fade-slide-up sm:max-w-lg lg:max-w-xl"
       aria-hidden
     >
       {/* Material Diterima - Mobile Version */}

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Poppins } from "next/font/google";
+
+import { Navbar } from "@/components/common";
+
 import "./globals.css";
 
 const geistMono = Geist_Mono({
@@ -28,7 +31,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${geistMono.variable} antialiased`}>
-        {children}
+        <Navbar />
+        <div className="pt-20">{children}</div>
       </body>
     </html>
   );
