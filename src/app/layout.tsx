@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Poppins } from "next/font/google";
 
-import { Navbar } from "@/components/common";
+import { Footer, Navbar } from "@/components/common";
 
 import "./globals.css";
 
@@ -35,7 +35,10 @@ export default function RootLayout({
         className={`${poppins.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        <div className="pt-20 lg:pt-28">{children}</div>
+        <div className="pt-20 lg:pt-28">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
