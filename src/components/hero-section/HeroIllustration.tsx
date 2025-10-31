@@ -5,7 +5,7 @@ import {
   HERO_MATERIALS,
   HERO_TIMELINE,
 } from "../../data/heroData";
-import { LucideIcon } from "./LucideIcon";
+import { LucideIcon } from "../common/LucideIcon";
 
 const MATERIAL_ICONS = {
   package: Package,

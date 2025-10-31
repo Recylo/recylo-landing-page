@@ -8,7 +8,7 @@ import { HeroIllustration } from "./HeroIllustration";
  */
 export const HeroSection = () => {
   return (
-    <section aria-labelledby="hero-heading" className="bg-hero-gradient">
+    <section aria-labelledby="hero-heading">
       <div className="section-container flex flex-col items-center gap-12 sm:gap-32 lg:flex-row lg:items-center lg:justify-between lg:gap-20">
         <HeroCopy />
         <HeroIllustration />
