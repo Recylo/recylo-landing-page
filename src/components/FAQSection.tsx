@@ -6,7 +6,7 @@ export const FAQSection = () => {
     <section
       id="faq"
       aria-labelledby="faq-heading"
-      className="section-padding-x scroll-mt-28 py-16 sm:scroll-mt-32 sm:py-20 md:py-0 lg:scroll-mt-40"
+      className="scroll-mt-10 py-0 sm:scroll-mt-10 sm:py-28 lg:scroll-mt-20 lg:py-10 mb-20"
     >
       <div className="section-container flex flex-col items-center gap-10 sm:gap-12">
         <FAQHeader />
