@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { type MouseEvent } from "react";
 
@@ -37,7 +38,7 @@ export const Footer = () => {
     };
 
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200">
+    <footer className="bg-neutral-50 border-t border-neutral-200 section-padding-x">
       {/* Main Footer Content */}
       <div className="section-container py-12 lg:py-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
@@ -48,7 +49,7 @@ export const Footer = () => {
               onClick={handleNavigate("/")}
               className="inline-block text-2xl font-bold text-brand-primary hover:opacity-80 transition-opacity"
             >
-              Recylo
+              <Image src="/recylo.jpg" alt="Recylo" width={150} height={50} />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-neutral-600 max-w-md">
               Recylo, rintisan hijau dari Makassar dan Gowa yang bantu kamu

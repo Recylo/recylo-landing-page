@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState, type MouseEvent } from "react";
 
@@ -53,7 +54,7 @@ export const Navbar = () => {
             className="text-xl font-bold text-brand-primary sm:text-2xl"
             onClick={closeMenu}
           >
-            Recylo
+            <Image src="/recylo.jpg" alt="Recylo" width={100} height={50} />
           </Link>
 
           {/* Desktop Navigation */}
