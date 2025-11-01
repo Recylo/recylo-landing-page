@@ -47,7 +47,7 @@ export const Navbar = () => {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="section-container section-padding-x">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-4 px-2 md:px-0">
           {/* Logo/Brand */}
           <Link
             href="/"
@@ -120,7 +120,7 @@ export const Navbar = () => {
           }`}
         >
           <div className="border-t border-border-soft pb-4 pt-4">
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-5 text-center">
               {NAV_LINKS.map((link) => (
                 <li key={link.label}>
                   <Link
