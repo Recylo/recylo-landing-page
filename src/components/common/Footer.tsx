@@ -47,14 +47,14 @@ export const Footer = () => {
             <Link
               href="/"
               onClick={handleNavigate("/")}
-              className="inline-block text-2xl font-bold text-brand-primary hover:opacity-80 transition-opacity"
+              className="inline-block text-2xl font-bold text-brand-primary transition-opacity"
             >
-              <Image src="/recylo.jpg" alt="Recylo" width={150} height={50} />
+              <Image src="/recylo.png" alt="Recylo" width={150} height={50} />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-neutral-600 max-w-md">
               Recylo, rintisan hijau dari Makassar dan Gowa yang bantu kamu
               pilah, jemput, dan ubah sampah jadi manfaat. Saatnya bareng-bareng
-              bikin Sulsel lebih bersih dan bernilai.
+              bikin Sulsel lebih bersih dan bernilai
             </p>
 
             {/* CTA Button */}
